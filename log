@@ -61,3 +61,15 @@ Wed 24 Apr 2024 09:44:01 PM UTC:
  tests:  12|2
 total_score: 50/70
 c6f31e6
+Wed 24 Apr 2024 09:44:55 PM UTC: 
+ hashmap.c | 5 ++++-
+ 1 file changed, 4 insertions(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c: In function ‘firstMap’:
+hashmap.c:131:32: error: left-hand operand of comma expression has no effect [-Werror=unused-value]
+  131 |   return map->buckets[posicion],posicion;
+      |                                ^
+hashmap.c:131:32: error: returning ‘long int’ from a function with return type ‘Pair *’ makes pointer from integer without a cast [-Werror=int-conversion]
+cc1: all warnings being treated as errors
+Compilation failed
+de6e837
