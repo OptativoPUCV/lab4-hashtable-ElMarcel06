@@ -85,3 +85,14 @@ Wed 24 Apr 2024 09:45:48 PM UTC:
  tests:  12|2
 total_score: 50/70
 21c83e1
+Wed 24 Apr 2024 09:46:25 PM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c: In function ‘firstMap’:
+hashmap.c:131:10: error: returning ‘HashMap *’ {aka ‘struct HashMap *’} from a function with incompatible return type ‘Pair *’ [-Werror=incompatible-pointer-types]
+  131 |   return map;
+      |          ^~~
+cc1: all warnings being treated as errors
+Compilation failed
+e4899a9
