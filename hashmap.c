@@ -152,15 +152,12 @@ Pair * firstMap(HashMap * map) {
 
 Pair * nextMap(HashMap * map) {
   if(map==NULL) return NULL;
-  long posicion=map->current+1;
-  while(map->buckets[posicion]==NULL){
-    posicion++;
+  for(int i = 0; i<map->capacity;i++){
+    if(map->buckets[i]!=NULL && map->buckets[i]->key!=NULL){
+      map->current=i;
+      return map->buckets[i];
+    }
   }
-  map->current=posicion;
-  if(map->buckets[posicion]->key==NULL) return NULL;
-  else{
-    return map->buckets[posicion];
-  }
-  
-    
+
+  return NULL;
 }
