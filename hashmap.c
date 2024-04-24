@@ -120,8 +120,15 @@ Pair * searchMap(HashMap * map,  char * key) {
 }
 
 Pair * firstMap(HashMap * map) {
-
-    return NULL;
+  if(map==NULL) return NULL;
+  long posicion=0;
+  while(map->buckets[posicion]==NULL){
+    posicion++;
+    
+  }
+  map->current=posicion;
+  return map->buckets[posicion];
+  
 }
 
 Pair * nextMap(HashMap * map) {
