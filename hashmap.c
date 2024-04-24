@@ -135,6 +135,13 @@ Pair * firstMap(HashMap * map) {
 }
 
 Pair * nextMap(HashMap * map) {
-
-    return NULL;
+  if(map==NULL) return NULL;
+  long posicion=map->current+1;
+  while(map->buckets[posicion]==NULL){
+    posicion++;
+  }
+  map->current=posicion;
+  return map->buckets[posicion];
+  
+    
 }
