@@ -165,3 +165,8 @@ hashmap.c:143:8: error: unused variable ‘posicion’ [-Werror=unused-variable]
 cc1: all warnings being treated as errors
 Compilation failed
 a0a0fdc
+Wed 24 Apr 2024 10:12:25 PM UTC: 
+ hashmap.c | 1 -
+ 1 file changed, 1 deletion(-)
+ tests:  0|0
+f5cf9aa
