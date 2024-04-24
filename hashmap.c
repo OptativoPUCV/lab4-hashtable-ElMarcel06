@@ -144,7 +144,10 @@ Pair * nextMap(HashMap * map) {
     posicion++;
   }
   map->current=posicion;
-  return map->buckets[posicion];
+  if(map->buckets[posicion]->key==NULL) return NULL;
+  else{
+    return map->buckets[posicion];
+  }
   
     
 }
