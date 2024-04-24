@@ -141,19 +141,14 @@ Pair * searchMap(HashMap * map,  char * key) {
 Pair * firstMap(HashMap * map) {
   if(map==NULL) return NULL;
   long posicion=0;
-  while(map->buckets[posicion]==NULL){
-    posicion++;
-    
-  }
-  map->current=posicion;
-  
-  if(map->buckets[posicion]->key==NULL) return NULL;
-  else{
-    return map->buckets[posicion];
+  for(int i = 0; i<map->capacity;i++){
+    if(map->buckets[i]!=NULL && map->buckets[i]->key!=NULL){
+      map->current=i;
+      return map->buckets[i];
+    }
   }
   
-  
-  
+  return NULL;
 }
 
 Pair * nextMap(HashMap * map) {
