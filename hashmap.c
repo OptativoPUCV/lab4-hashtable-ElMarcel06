@@ -128,7 +128,10 @@ Pair * firstMap(HashMap * map) {
   }
   map->current=posicion;
   
-  return map;
+  if(map->buckets[posicion]->key==NULL) return NULL;
+  else{
+    return map->buckets[posicion];
+  }
 
   
   
