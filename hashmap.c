@@ -66,6 +66,7 @@ void insertMap(HashMap * map, char * key, void * value) {
 
 void enlarge(HashMap * map) {
     enlarge_called = 1; //no borrar (testing purposes)
+  /*
     Pair ** aux = map->buckets;
     map->capacity = map->capacity*2;
     map->buckets = (Pair **)calloc(map->capacity,sizeof(Pair *));
@@ -84,7 +85,7 @@ void enlarge(HashMap * map) {
       
     }
     free(aux);
-    
+    */
 }
 
 
@@ -125,6 +126,7 @@ Pair * searchMap(HashMap * map,  char * key) {
     if(is_equal(map->buckets[posicion]->key,key)){
       map->current=posicion;
       return map->buckets[posicion];
+      
     }
     else{
       posicion=(posicion+1)%map->capacity;
@@ -149,7 +151,7 @@ Pair * firstMap(HashMap * map) {
   else{
     return map->buckets[posicion];
   }
-
+  
   
   
 }
